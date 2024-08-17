@@ -1,6 +1,5 @@
 import customtkinter
 import tkinter as tk
-import csv
 from views.RegisterView import RegisterView
 from views.HomeView import HomeView
 from PIL import Image
@@ -86,7 +85,7 @@ class LoginView(customtkinter.CTk):
                 else:
                     self.entry_1.delete(tk.ANCHOR, tk.INSERT)
                     self.entry_2.delete(tk.ANCHOR, tk.INSERT)
-                    return customtkinter.CTkMessageBox(text="Vos identifiants ne sont pas corrects !", title="Attention !")
+                    return tk.messagebox.showinfo(message="Vos identifiants ne sont pas corrects !", title="Attention !")
 
     def change_view_login(self):
         """

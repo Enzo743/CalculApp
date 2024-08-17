@@ -1,4 +1,5 @@
 import customtkinter
+import tkinter as tk
 import random
 from PIL import Image
 
@@ -524,4 +525,4 @@ class AdditionsL2View(customtkinter.CTk):
                 self.time_loop = self.label_1.after(1000, self.countdown)
         else:
             self.after_cancel(self.time_loop)
-            customtkinter.CTkMessageBox(text="Le temps est écoulé. Appuyer sur OK pour continuer ! Et n'oubliez pas de fermer la page de jeu !", title="C'est fini !")
+            tk.messagebox.showinfo(message="Le temps est écoulé. Appuyer sur OK pour continuer ! Et n'oubliez pas de fermer la page de jeu !", title="C'est fini !")
